@@ -49,3 +49,40 @@ preco.forEach((item) =>{
     console.log(item.padStart(20, '.'));
 
 });
+
+const frase3 = 'Tá';
+
+console.log(frase3.repeat(3));
+
+//regular expression
+
+let listaItens = 'Camisas Bonés Calças Bermudas Vestidos Saias';
+listaItens = listaItens.replace(/[ ]+/g,', ');
+console.log(listaItens);
+
+const arrayLista = listaItens.split(', ');
+console.log(arrayLista);
+
+const htmlText = '<div>O melhor item</div><div>A melhor lista</div>';
+const htmlArray = htmlText.split('div');
+const novoHtml = htmlArray.join('section');
+
+console.log(htmlText);
+console.log(htmlArray);
+console.log(novoHtml);
+
+const frutasArray = ['Banana','Melancia','Laranja'];
+console.log(frutasArray.join(', '));
+
+const sexo1 = 'Feminino';
+const sexo2 = 'feminino';
+const sexo3 = 'FEMININO';
+
+console.log(sexo1.toLowerCase() === 'feminino');
+console.log(sexo2.toLowerCase() === 'feminino');
+console.log(sexo3.toLowerCase() === 'feminino');
+
+const valor = '   R$ 23.00';
+console.log(valor.trim());
+console.log(valor.trimStart());
+console.log(valor.trimEnd());
