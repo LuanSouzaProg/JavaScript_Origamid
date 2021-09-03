@@ -67,9 +67,9 @@ const numeros2 = [10, 25, 30, 3, 54, 33, 22];
 
 const maiorNumero = numeros2.reduce((anterior, atual) =>{
     if(anterior > atual){
-        return anterior
+        return anterior;
     }else{
-        return atual
+        return atual;
     }
 }, 0);
 
@@ -107,8 +107,18 @@ const every = frutas.every((frutas) =>{
     return frutas;
 });
 
+const find = frutas.find((item) =>{
+    return item === 'Uva';
+});
+
+const findIndex = frutas.findIndex((item) =>{
+    return item === 'Uva';
+});
+
 console.log(every);
 console.log(temUva);
+console.log(find);
+console.log(findIndex);
 
 const numeros3 = [6, 43, 22, 88, 101, 29];
 
@@ -117,3 +127,36 @@ const maiorQue3 = numeros3.every((numero) =>{
 });
 
 console.log(maiorQue3);
+
+const frutas2 = ['Banana', undefined, null, '', 'Uva', 0, 'Maçã'];
+
+const arrayLimpa = frutas.filter((fruta) =>{
+    return fruta;
+});
+
+console.log(arrayLimpa);
+
+const aulas4 = [
+    {
+        nome : 'HTML 1',
+        min : 15,
+    },
+    {
+        nome : 'HTML 2',
+        min : 10,
+    },
+    {
+        nome : 'CSS 1',
+        min : 20,
+    },
+    {
+        nome : 'JS 1',
+        min : 25,
+    },
+];
+
+const maiores15 = aulas4.filter((aulas) =>{
+    return aulas.min >= 15;
+});
+
+console.log(maiores15);
