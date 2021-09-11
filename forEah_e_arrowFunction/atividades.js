@@ -22,3 +22,4 @@ imgsAtividades.forEach(() => {
 });
 
 imgsAtividades.forEach(() => (i++));
+
