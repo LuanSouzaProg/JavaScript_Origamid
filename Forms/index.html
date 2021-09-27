@@ -54,11 +54,20 @@
             <option value="blue">Azul</option>
             <option value="red">Vermelho</option>
         </select>
-        <input type="color">
+        <!--<input type="color">
         <input type="date">
         <input type="number">
         <input type="range">
-        <input type="password">
+        <input type="password">-->
+        <input type="checkbox" value="identidade" id="identidade">
+        <label for="identidade">Possui identidade?</label>
+        <input type="checkbox" value="casado" id="casado">
+        <label for="casado">casado ?</label>
+
+        <input type="radio" value="guitarra" id="guitarra" name="instrumento">
+        <label for="guitarra">Guitarra</label>
+        <input type="radio" value="baixo" id="baixo" name="instrumento">
+        <label for="baixo">baixo ?</label>
 
     </form>
 
@@ -74,8 +83,19 @@
         }*/
 
         function handleKayUp (event){
-            console.log(event.target.value);
-            document.body.style.backgroundColor = event.target.value;
+            //console.log(event.target.value);
+            if(event.target.checked){
+                console.log(event.target.value);
+            }
+            //console.log(event.target.checked);
+            //document.body.style.backgroundColor = event.target.value;
+        }
+
+        dados = {};
+
+        function handleChange(event){
+            dados[event.target.name] = event.target.value;
+            console.log(dados);
         }
 
         /*function handleKayUp (event){
@@ -95,6 +115,7 @@
 
         contato.addEventListener('change', cores);
         contato.addEventListener('change', handleKayUp);
+        contato.addEventListener('change', handleChange);
 
     </script>
 
