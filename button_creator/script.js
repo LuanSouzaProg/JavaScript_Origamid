@@ -33,7 +33,7 @@ const handleStyle = {
     fontSize(value){
         this.element.style.fontSize = value + "rem";
     },
-}
+};
 
 function handleChange(event){
     const name = event.target.name;
@@ -41,9 +41,24 @@ function handleChange(event){
 
     handleStyle[name](value);
     showCss();
-}
+    saveValues(name, value);
+};
 
 function showCss(){
     cssText.innerHTML = '<span>' + btn.style.cssText.split('; ').join('; </span><span>');
-}
+};
 
+function saveValues(name, value){
+    localStorage[name] = value;
+};
+
+function setValues(){
+    const properties = Object.keys(localStorage);
+    properties.forEach(propertie => {
+        handleStyle[propertie](localStorage[propertie]);
+        controles.elements[propertie].value = localStorage[propertie];
+    });
+    showCss();
+};
+
+setValues();
