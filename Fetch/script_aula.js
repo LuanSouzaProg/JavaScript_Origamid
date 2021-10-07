@@ -65,7 +65,9 @@ const testStatus = fetch("https://viacep.com.br/ws/88980-000/json/");
 
 testStatus.then(response => {
     console.log(response.status);
+
     console.log(response.type);
+
     console.log(response.url);
 
     if(response.status === 404){
