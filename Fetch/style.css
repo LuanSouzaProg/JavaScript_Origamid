@@ -1,3 +1,13 @@
 body{
-    background: blueviolet;
+    background: wheat;
+}
+
+label{
+    display: block;
+    padding: 10px 20px;
+}
+
+input{
+    display: block;
+    margin: 10px;
 }
